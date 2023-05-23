@@ -2,8 +2,12 @@ body {
   margin: 0px;
 }
 
+/* #head {
+  align-items: center;
+  justify-content: center;
+} */
+
 #game_grid {
-  border: 2px tomato solid;
   width: 600px;
   height: 400px;
   margin: auto;
@@ -11,6 +15,12 @@ body {
   flex-wrap: wrap;
 }
 
+#game_grid.med {
+  justify-content: space-between;
+}
+.dark {
+  background-color: black;
+}
 
 .card {
   width: 33.3%;
@@ -20,9 +30,15 @@ body {
   transform-style: preserve-3d;
 }
 
+.card.med {
+  width: 22.9%;
+}
+.card.hard {
+  width: 16.6%;
+}
 
 img {
-  width: 100%
+  width: 100%;
 }
 
 .front_face,
@@ -31,12 +47,60 @@ img {
   backface-visibility: hidden;
 }
 
-
 .flip {
   transform: rotateY(180deg);
 }
 
-
 .front_face {
   transform: rotateY(180deg);
+}
+
+.locked {
+  pointer-events: none;
+}
+.matched {
+  opacity: 100%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#stats {
+  display: flex;
+  flex-direction: row;
+}
+
+#stats p {
+  font-size: 22px;
+  margin: 20px;
+}
+
+#buttons {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+#buttons button {
+  padding: 10px;
+  border: none;
+  background-color: rgba(0, 85, 255, 0.415);
+}
+#buttons button:hover {
+  background-color: rgba(240, 64, 55, 0.732);
+  color: white;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#controls div {
+  margin: 0 20px;
 }
